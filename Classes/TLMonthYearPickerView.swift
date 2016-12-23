@@ -8,20 +8,32 @@
 
 import UIKit
 
+/// enum MonthYearPickerMode
+///
+/// - monthAndYear: Show month and year components
+/// - year: Show year only
 public enum MonthYearPickerMode: Int {
     case monthAndYear = 0
     case year = 1
 }
 
+/// Maximum year constant
 fileprivate let kMaximumYears = 5000
+/// Minimum year constant
 fileprivate let kMinimumYears = 1
 
 public protocol TLMonthYearPickerDelegate: NSObjectProtocol {
+    /// Delegate: notify picker date changed
+    ///
+    /// - Parameters:
+    ///   - picker: return picker instant
+    ///   - date: return picker date value
     func monthYearPickerView(picker: TLMonthYearPickerView, didSelectDate date: Date)
 }
 
 public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    /// Set picker mode: monthAndYear or year only
     public var monthYearPickerMode = MonthYearPickerMode.monthAndYear {
         didSet(value) {
             self._picker?.reloadAllComponents()
@@ -29,6 +41,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    /// Locale value, default is device locale
     fileprivate var _locale: Locale?
     var locale: Locale! {
         get {
@@ -44,6 +57,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    /// Calendar value, default is device calendar
     fileprivate var _calendar: Calendar!
     public var calendar: Calendar! {
         get {
@@ -59,22 +73,40 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    
+    /// Picker text color, default is black color
     public var textColor: UIColor = UIColor.black {
         didSet(value) {
             self._picker?.reloadAllComponents()
         }
     }
     
+    
+    /// Picker font, default is system font with size 16
     public var font: UIFont = UIFont.systemFont(ofSize: 16) {
         didSet(value) {
             self._picker?.reloadAllComponents()
         }
     }
     
+    /// Get/Set Picker background color
+    public override var backgroundColor: UIColor? {
+        get {
+            return super.backgroundColor
+        }
+        set(value) {
+            super.backgroundColor = value
+            self._picker?.backgroundColor = value
+        }
+    }
+    
+    /// Current picker value
     public var date: Date!
     
+    /// Delegate
     public weak var delegate: TLMonthYearPickerDelegate?
     
+    /// Maximum date
     public var minimumDate: Date? {
         didSet(value) {
             if let date = value {
@@ -89,6 +121,8 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
             self._picker?.reloadAllComponents()
         }
     }
+    
+    /// Mimimum date
     public var maximumDate: Date? {
         didSet(value) {
             if let date = value {
@@ -105,11 +139,16 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     }
     
     //MARK: - Internal variables
+    
+    /// UIPicker
     fileprivate var _picker: UIPickerView!
     
+    
+    /// month year array values
     fileprivate var _months: [String] = []
     fileprivate var _years: [String] = []
     
+    /// Store caculated value of minimum year-month and maximum year-month
     fileprivate var _minimumYear = -1
     fileprivate var _maximumYear = -1
     fileprivate var _minimumMonth = -1
@@ -125,6 +164,9 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         self.initView()
     }
     
+    
+    /// Initial view 
+    /// Setup Picker and Picker data
     internal func initView() {
         self._picker = UIPickerView(frame: self.bounds)
         self._picker.showsSelectionIndicator = true
@@ -140,6 +182,8 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         self._picker.reloadAllComponents()
     }
     
+    
+    /// Setup picker data
     internal func initPickerData() {
         //list of month
         let dateFormatter = DateFormatter()
@@ -157,9 +201,10 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    
+    /// Set picker date to UI
     override public func didMoveToSuperview() {
         super.didMoveToSuperview()
-        
         self.setDate(date: self.date, animated: false)
     }
     
@@ -169,6 +214,12 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     }
     
     //MARK: - Public function
+    
+    /// Set date to picker
+    ///
+    /// - Parameters:
+    ///   - date: the date user choose
+    ///   - animated: display UI animate or not
     func setDate(date: Date, animated: Bool) {
         // Extract the month and year from the current date value
         let components = self.calendar.dateComponents([.year, .month], from: date)
@@ -187,11 +238,19 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     }
     
     //MARK: - Implement UIPickerViewDataSource, UIPickerViewDelegate
-    
+
+    /// - Parameters:
+    /// - Parameter pickerView
+    /// - Returns: return 2 if pickerMode is monthAndYear, otherwise return 1
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return self.monthYearPickerMode == .year ? 1 : 2
     }
     
+    
+    /// - Parameters:
+    ///   - pickerView
+    ///   - component
+    /// - Returns: return number of row
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if self.monthYearPickerMode == .year {
             return self._years.count
@@ -203,9 +262,13 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
             }
         }
     }
-    
+
+    /// - Parameters:
+    ///   - pickerView
+    ///   - row
+    ///   - component
+    /// - Returns: display string of specific row in specific component
     public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        
         let isSelectYear = self.monthYearPickerMode == .year || component == 1
         var shouldDisable = false
         
@@ -250,6 +313,10 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
             ])
     }
     
+    /// - Parameters:
+    ///   - pickerView
+    ///   - row
+    ///   - component
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if let date = self.dateFromSelection() {
             self.date = date
@@ -272,6 +339,13 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    
+    /// Compare only month and year value
+    ///
+    /// - Parameters:
+    ///   - date1: first date you want to compare
+    ///   - date2: second date you want to compare
+    /// - Returns: ComparisonResult
     fileprivate func compareMonthAndYear(date1: Date, date2: Date) -> ComparisonResult {
         let components1 = self.calendar.dateComponents([.year, .month], from: date1)
         let components2 = self.calendar.dateComponents([.year, .month], from: date2)
@@ -283,6 +357,9 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    /// Caculate date of current picker
+    ///
+    /// - Returns: Date
     fileprivate func dateFromSelection() -> Date? {
         var month = 1
         var year = 1
