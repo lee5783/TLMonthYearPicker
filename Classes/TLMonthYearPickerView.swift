@@ -34,8 +34,13 @@ public protocol TLMonthYearPickerDelegate: NSObjectProtocol {
 public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerViewDelegate {
     
     /// Set picker mode: monthAndYear or year only
-    public var monthYearPickerMode = MonthYearPickerMode.monthAndYear {
-        didSet(value) {
+    fileprivate var _mode: MonthYearPickerMode = .monthAndYear
+    public var monthYearPickerMode: MonthYearPickerMode {
+        get {
+            return self._mode
+        }
+        set(value) {
+            self._mode = value
             self._picker?.reloadAllComponents()
             self.setDate(date: self.date, animated: false)
         }
@@ -54,6 +59,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         
         set(value) {
             self._locale = value
+            self._calendar.locale = value
         }
     }
     
@@ -64,7 +70,9 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
             if self._calendar != nil {
                 return self.calendar
             } else {
-                return Calendar.current
+                var calendar = Calendar.current
+                calendar.locale = self.locale
+                return calendar
             }
         }
         
@@ -107,8 +115,14 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     public weak var delegate: TLMonthYearPickerDelegate?
     
     /// Maximum date
+    fileprivate var _minimumDate: Date?
     public var minimumDate: Date? {
-        didSet(value) {
+        get {
+            return self._minimumDate
+        }
+        
+        set(value) {
+            self._minimumDate = value
             if let date = value {
                 let components = self.calendar.dateComponents([.year, .month], from: date)
                 _minimumYear = components.year!
@@ -123,8 +137,14 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     }
     
     /// Mimimum date
+    fileprivate var _maximumDate: Date?
     public var maximumDate: Date? {
-        didSet(value) {
+        get {
+            return self._maximumDate
+        }
+        
+        set(value) {
+            self._maximumDate = value
             if let date = value {
                 let components = self.calendar.dateComponents([.year, .month], from: date)
                 _maximumYear = components.year!
@@ -142,7 +162,6 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     
     /// UIPicker
     fileprivate var _picker: UIPickerView!
-    
     
     /// month year array values
     fileprivate var _months: [String] = []
@@ -234,7 +253,6 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
             self._picker.selectRow(year - kMinimumYears, inComponent: 1, animated: animated)
             self._picker.selectRow(month - 1, inComponent: 0, animated: animated)
         }
-        self.delegate?.monthYearPickerView(picker: self, didSelectDate: date)
     }
     
     //MARK: - Implement UIPickerViewDataSource, UIPickerViewDelegate
@@ -274,7 +292,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         
         if isSelectYear {
             let year = row + kMinimumYears
-            if (self.maximumDate != nil && year > _maximumYear) || (self.minimumDate != nil && year < _minimumYear)
+            if (self._maximumDate != nil && year > _maximumYear) || (self._minimumDate != nil && year < _minimumYear)
             {
                 shouldDisable = true
             }
@@ -283,9 +301,9 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
             let components = self.calendar.dateComponents([.year], from: self.date)
             let year = components.year!
             
-            if (self.maximumDate != nil && year > _maximumYear)
+            if (self._maximumDate != nil && year > _maximumYear)
                 || (year == _maximumYear && month > _maximumMonth)
-                || (self.minimumDate != nil && year < _minimumYear)
+                || (self._minimumDate != nil && year < _minimumYear)
                 || (year == _minimumYear && month < _minimumMonth) {
                 shouldDisable = true
             }
@@ -321,17 +339,19 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         if let date = self.dateFromSelection() {
             self.date = date
             
-            if let minimumDate = self.minimumDate {
+            if let minimumDate = self._minimumDate {
                 if minimumDate.compare(date) == .orderedDescending {
                     self.setDate(date: minimumDate, animated: true)
                 }
-            } else if let maximumDate = self.maximumDate {
+            }
+            
+            if let maximumDate = self._maximumDate {
                 if maximumDate.compare(date) == .orderedAscending {
                     self.setDate(date: maximumDate, animated: true)
                 }
-            } else {
-                self.setDate(date: date, animated: false)
             }
+            
+            self.delegate?.monthYearPickerView(picker: self, didSelectDate: date)
             
             if self.monthYearPickerMode == .monthAndYear {
                 self._picker.reloadComponent(0)
@@ -374,7 +394,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         components.month = month
         components.year = year
         components.day = 1
-        
+        components.timeZone = TimeZone(secondsFromGMT: 0)
         return self.calendar.date(from: components)
     }
 }

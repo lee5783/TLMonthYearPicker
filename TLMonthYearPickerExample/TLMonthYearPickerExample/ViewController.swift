@@ -38,6 +38,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    internal var minimumDate: Date {
+        var components = Calendar.current.dateComponents([.month, .year], from: Date())
+        components.year = components.year! - 5
+        components.month = (components.month! - 6) % 12
+        return Calendar.current.date(from: components)!
+    }
+    
+    internal var maximumDate: Date {
+        var components = Calendar.current.dateComponents([.month, .year], from: Date())
+        components.year = components.year! + 5
+        components.month = (components.month! + 6) % 12
+        return Calendar.current.date(from: components)!
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == self.currentPickerIndex {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "PickerCell", for: indexPath) as! PickerCell
@@ -46,6 +60,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             } else {
                 cell.monthYearPicker.monthYearPickerMode = .year
             }
+            cell.monthYearPicker.minimumDate = self.minimumDate
+            cell.monthYearPicker.maximumDate = self.maximumDate
             cell.monthYearPicker.delegate = self
             return cell
         } else {
