@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "A simple month and year picker."
   s.description  = "A simple month and year picker."
-  s.homepage     = "http://EXAMPLE/TLMonthYearPicker"
+  s.homepage     = "https://github.com/lee5783/TLMonthYearPicker"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
