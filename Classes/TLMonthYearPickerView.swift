@@ -337,21 +337,21 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     ///   - component
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if let date = self.dateFromSelection() {
-            self.date = date
-            
+            var targetDate = date
             if let minimumDate = self._minimumDate {
                 if minimumDate.compare(date) == .orderedDescending {
-                    self.setDate(date: minimumDate, animated: true)
+                    targetDate = minimumDate
                 }
             }
             
             if let maximumDate = self._maximumDate {
                 if maximumDate.compare(date) == .orderedAscending {
-                    self.setDate(date: maximumDate, animated: true)
+                    targetDate = maximumDate
                 }
             }
             
-            self.delegate?.monthYearPickerView(picker: self, didSelectDate: date)
+            self.setDate(date: targetDate, animated: true)
+            self.delegate?.monthYearPickerView(picker: self, didSelectDate: targetDate)
             
             if self.monthYearPickerMode == .monthAndYear {
                 self._picker.reloadComponent(0)
