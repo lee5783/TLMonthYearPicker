@@ -59,7 +59,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         
         set(value) {
             self._locale = value
-            self._calendar.locale = value
+            self.calendar.locale = value
         }
     }
     
@@ -68,7 +68,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     public var calendar: Calendar! {
         get {
             if self._calendar != nil {
-                return self.calendar
+                return self._calendar
             } else {
                 var calendar = Calendar.current
                 calendar.locale = self.locale
@@ -78,6 +78,8 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         
         set(value) {
             self._calendar = value
+            self._locale = value.locale
+            self.initPickerData()
         }
     }
     
@@ -161,7 +163,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     //MARK: - Internal variables
     
     /// UIPicker
-    fileprivate var _picker: UIPickerView!
+    var _picker: UIPickerView!
     
     /// month year array values
     fileprivate var _months: [String] = []
@@ -184,7 +186,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     }
     
     
-    /// Initial view 
+    /// Initial view
     /// Setup Picker and Picker data
     internal func initView() {
         self._picker = UIPickerView(frame: self.bounds)
@@ -206,12 +208,13 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     internal func initPickerData() {
         //list of month
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = self.locale == nil ? Locale.current : self.locale!
+        dateFormatter.locale = self.locale
         self._months = dateFormatter.monthSymbols
         
         dateFormatter.dateFormat = "yyyy"
         var components = DateComponents()
         
+        self._years.removeAll()
         for year in kMinimumYears...kMaximumYears {
             components.year = year
             if let date = self.calendar.date(from: components) {
@@ -256,7 +259,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     }
     
     //MARK: - Implement UIPickerViewDataSource, UIPickerViewDelegate
-
+    
     /// - Parameters:
     /// - Parameter pickerView
     /// - Returns: return 2 if pickerMode is monthAndYear, otherwise return 1
@@ -280,7 +283,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
             }
         }
     }
-
+    
     /// - Parameters:
     ///   - pickerView
     ///   - row
