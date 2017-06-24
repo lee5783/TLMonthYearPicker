@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "TLMonthYearPicker"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A simple month and year picker."
   s.description  = "A simple month and year picker."
   s.homepage     = "https://github.com/lee5783/TLMonthYearPicker"

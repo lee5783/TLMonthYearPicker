@@ -1,5 +1,5 @@
 PODS:
-  - TLMonthYearPicker (1.0.1)
+  - TLMonthYearPicker (1.0.2)
 
 DEPENDENCIES:
   - TLMonthYearPicker (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TLMonthYearPicker: 2bd883a92281bf2668a331168cbee84e99c2457d
+  TLMonthYearPicker: 5bfd158b40e8edf4421a71e0de46f26c2c6c5874
 
 PODFILE CHECKSUM: 9bd17266eb986b2612af1dd3a9b40254e7b34a24
 
