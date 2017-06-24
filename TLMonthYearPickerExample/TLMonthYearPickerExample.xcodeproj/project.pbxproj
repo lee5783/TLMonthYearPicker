@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663A81A21EFE195600AE1311 /* LocalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663A81A11EFE195600AE1311 /* LocalesViewController.swift */; };
 		66C9A2851E0C238A000E4AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C9A2841E0C238A000E4AD3 /* AppDelegate.swift */; };
 		66C9A2871E0C238A000E4AD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C9A2861E0C238A000E4AD3 /* ViewController.swift */; };
 		66C9A28A1E0C238A000E4AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C9A2881E0C238A000E4AD3 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		1A261D69D90B56125A8A7E8D /* Pods-TLMonthYearPickerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLMonthYearPickerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLMonthYearPickerExample/Pods-TLMonthYearPickerExample.debug.xcconfig"; sourceTree = "<group>"; };
 		46D317F5C5D552CA5D2A1DAF /* Pods-TLMonthYearPickerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLMonthYearPickerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLMonthYearPickerExample/Pods-TLMonthYearPickerExample.release.xcconfig"; sourceTree = "<group>"; };
 		505D1FEA8AE69A3EE30644F6 /* Pods_TLMonthYearPickerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLMonthYearPickerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		663A81A11EFE195600AE1311 /* LocalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalesViewController.swift; sourceTree = "<group>"; };
 		66C9A2811E0C238A000E4AD3 /* TLMonthYearPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLMonthYearPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C9A2841E0C238A000E4AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C9A2861E0C238A000E4AD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,11 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				66C9A2841E0C238A000E4AD3 /* AppDelegate.swift */,
-				66C9A2861E0C238A000E4AD3 /* ViewController.swift */,
-				66C9A2881E0C238A000E4AD3 /* Main.storyboard */,
 				66C9A28B1E0C238A000E4AD3 /* Assets.xcassets */,
-				66C9A28D1E0C238A000E4AD3 /* LaunchScreen.storyboard */,
 				66C9A2901E0C238A000E4AD3 /* Info.plist */,
+				66C9A28D1E0C238A000E4AD3 /* LaunchScreen.storyboard */,
+				663A81A11EFE195600AE1311 /* LocalesViewController.swift */,
+				66C9A2881E0C238A000E4AD3 /* Main.storyboard */,
+				66C9A2861E0C238A000E4AD3 /* ViewController.swift */,
 			);
 			path = TLMonthYearPickerExample;
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3B88B16AC11791FA11E182BF /* [CP] Copy Pods Resources */ = {
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663A81A21EFE195600AE1311 /* LocalesViewController.swift in Sources */,
 				66C9A2871E0C238A000E4AD3 /* ViewController.swift in Sources */,
 				66C9A2851E0C238A000E4AD3 /* AppDelegate.swift in Sources */,
 			);

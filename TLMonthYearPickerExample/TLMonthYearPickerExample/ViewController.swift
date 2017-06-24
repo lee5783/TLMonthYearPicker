@@ -11,7 +11,7 @@ import TLMonthYearPicker
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TLMonthYearPickerDelegate {
     @IBOutlet weak var tableView: UITableView!
-    
+    var _locale: Locale!
     internal var currentPickerIndex: Int = NSNotFound
     
     //data variable
@@ -24,6 +24,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.tableFooterView = UIView()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        currentPickerIndex = NSNotFound
+        _locale = Locale(identifier: appLocaleIdentifier)
+        tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,7 +61,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == self.currentPickerIndex {
-            let cell = self.tableView.dequeueReusableCell(withIdentifier: "PickerCell", for: indexPath) as! PickerCell
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "PickerCell") as! PickerCell
+            var calendar = Calendar(identifier: .gregorian)
+            calendar.locale = _locale
+            cell.monthYearPicker.calendar = calendar
             if self.currentPickerIndex == 1 {
                 cell.monthYearPicker.monthYearPickerMode = .monthAndYear
             } else {
@@ -67,7 +77,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
             let dateFormater = DateFormatter()
-            
+            dateFormater.locale = self._locale
             if indexPath.row == 0 {
                 //Month year cell
                 if let date = self.selectedMonthYear {

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gxb-ko-VV5">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gxb-ko-VV5">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-986" y="135"/>
         </scene>
-        <!--Example-->
+        <!--Picker Examples-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="TLMonthYearPickerExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EdP-hi-Xbo" id="H5L-XC-yPD">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tw9-cN-EEF">
@@ -74,7 +74,7 @@
                                         <rect key="frame" x="0.0" y="72" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aWo-9J-ZhO" id="kx6-nx-dT4">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKl-ra-Ehe" customClass="TLMonthYearPickerView" customModule="TLMonthYearPicker">
@@ -111,7 +111,13 @@
                             <constraint firstAttribute="trailing" secondItem="5XV-fB-Yhn" secondAttribute="trailing" id="xKn-3d-dOi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Example" id="BeH-VD-h6W"/>
+                    <navigationItem key="navigationItem" title="Picker Examples" id="BeH-VD-h6W">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Fe2-Zw-xkU">
+                            <connections>
+                                <segue destination="Knj-K2-Bdo" kind="show" id="c9m-Fn-AI2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="5XV-fB-Yhn" id="gl5-bQ-e3s"/>
                     </connections>
@@ -119,6 +125,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.75" y="135.21126760563379"/>
+        </scene>
+        <!--Locales-->
+        <scene sceneID="Ib8-Xi-Fed">
+            <objects>
+                <viewController storyboardIdentifier="LocalesViewController" automaticallyAdjustsScrollViewInsets="NO" id="Knj-K2-Bdo" customClass="LocalesViewController" customModule="TLMonthYearPickerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FbA-23-nK4"/>
+                        <viewControllerLayoutGuide type="bottom" id="WYe-Up-KqE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SHu-v1-EAA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BWy-mn-sl9">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tnY-tT-kyp">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tnY-tT-kyp" id="5ov-95-hHU">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Knj-K2-Bdo" id="iyS-QF-YO9"/>
+                                    <outlet property="delegate" destination="Knj-K2-Bdo" id="1s3-ap-a0O"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WYe-Up-KqE" firstAttribute="top" secondItem="BWy-mn-sl9" secondAttribute="bottom" id="9lO-lg-MsA"/>
+                            <constraint firstItem="BWy-mn-sl9" firstAttribute="leading" secondItem="SHu-v1-EAA" secondAttribute="leading" id="Del-Xc-Jh2"/>
+                            <constraint firstItem="BWy-mn-sl9" firstAttribute="top" secondItem="FbA-23-nK4" secondAttribute="bottom" id="Skz-fI-ODW"/>
+                            <constraint firstAttribute="trailing" secondItem="BWy-mn-sl9" secondAttribute="trailing" id="qtb-8M-7fP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Locales" id="5Di-SS-BwZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="BWy-mn-sl9" id="kgd-cQ-Far"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xai-OY-pXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104" y="134"/>
         </scene>
     </scenes>
 </document>
