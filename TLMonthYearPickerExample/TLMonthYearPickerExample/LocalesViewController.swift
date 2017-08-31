@@ -18,7 +18,10 @@ class LocalesViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         
         _locale = Locale(identifier: appLocaleIdentifier)
-        _allLocaleIds = Locale.availableIdentifiers
+        _allLocaleIds = [Locale.current.identifier, "vi_VN"]
+        if Locale.current.identifier.compare("en_US") != .orderedSame {
+            _allLocaleIds .insert("en_US", at: 0)
+        }
         
         let index = _allLocaleIds.index(where: { appLocaleIdentifier.compare($0) == .orderedSame })
         if index != nil {
