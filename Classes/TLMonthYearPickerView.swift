@@ -329,8 +329,8 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
         }
         
         return NSAttributedString(string: text, attributes: [
-            NSAttributedStringKey.font: self.font,
-            NSAttributedStringKey.foregroundColor: color
+            NSAttributedString.Key.font: self.font,
+            NSAttributedString.Key.foregroundColor: color
             ])
     }
     
