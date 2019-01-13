@@ -30,15 +30,15 @@ Simply drag 'TLMonthYearPickerView.swift' into your project.
 
 ### Installation with CocoaPods
 ```ruby
-        pod 'TLMonthYearPicker'
+    pod 'TLMonthYearPicker'
 ```
 For Swift 4.0, please use version 2.0.0:
 ```ruby
-pod 'TLMonthYearPicker', '2.0.0'
+    pod 'TLMonthYearPicker', '2.0.0'
 ```
 For Swift 3.x, please use version 1.0.3:
 ```ruby
-        pod 'TLMonthYearPicker', '1.0.3'
+    pod 'TLMonthYearPicker', '1.0.3'
 ```
 ## License
 Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
