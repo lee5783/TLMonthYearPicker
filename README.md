@@ -1,5 +1,5 @@
 # TLMonthYearPicker
-A simple month and year picker for iOS app development. Now support Swift 4
+A simple month and year picker for iOS app development. Now support Swift 4.2
 
 <p align="center">
  <img src="https://github.com/lee5783/TLMonthYearPicker/raw/master/demo.gif" alt="TLMonthYearPicker"/>
@@ -31,6 +31,10 @@ Simply drag 'TLMonthYearPickerView.swift' into your project.
 ### Installation with CocoaPods
 ```ruby
         pod 'TLMonthYearPicker'
+```
+For Swift 4.0, please use version 2.0.0:
+```ruby
+pod 'TLMonthYearPicker', '2.0.0'
 ```
 For Swift 3.x, please use version 1.0.3:
 ```ruby
