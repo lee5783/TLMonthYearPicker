@@ -1,5 +1,5 @@
 # TLMonthYearPicker
-A simple month and year picker for iOS app development. Now support Swift 4.2
+A simple month and year picker for iOS app development. Now support Swift 4.2</br>
 Android version can be found [here](https://github.com/minhnn2607/TLMonthYearPicker).
 
 <p align="center">
