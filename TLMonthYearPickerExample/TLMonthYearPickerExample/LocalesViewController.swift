@@ -23,7 +23,7 @@ class LocalesViewController: UIViewController, UITableViewDataSource, UITableVie
             _allLocaleIds .insert("en_US", at: 0)
         }
         
-        let index = _allLocaleIds.index(where: { appLocaleIdentifier.compare($0) == .orderedSame })
+        let index = _allLocaleIds.firstIndex(where: { appLocaleIdentifier.compare($0) == .orderedSame })
         if index != nil {
             tableView.selectRow(at: IndexPath(row: index!, section: 0), animated: false, scrollPosition: .none)
         }
