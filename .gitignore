@@ -2,3 +2,5 @@
 TLMonthYearPicker.xcodeproj/xcuserdata
 TLMonthYearPicker.xcodeproj/project.xcworkspace/xcuserdata
 TLMonthYearPickerExample/TLMonthYearPickerExample.xcodeproj/xcuserdata
+.build
+.swiftpm
