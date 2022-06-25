@@ -12,9 +12,9 @@
 
 /* Begin PBXFileReference section */
 		661ED1F91E0C218A005EE500 /* TLMonthYearPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLMonthYearPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6649FC2F2866BEB400214E2A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		667FDE281E0D0ED200902CAC /* TLMonthYearPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMonthYearPicker.h; sourceTree = "<group>"; };
 		667FDE291E0D0ED200902CAC /* TLMonthYearPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLMonthYearPickerView.swift; sourceTree = "<group>"; };
-		667FDE2A1E0D0ED200902CAC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +31,8 @@
 		661ED1EF1E0C218A005EE500 = {
 			isa = PBXGroup;
 			children = (
-				661ED1FB1E0C218A005EE500 /* TLMonthYearPicker */,
+				6649FC2F2866BEB400214E2A /* Info.plist */,
+				667FDE271E0D0ED200902CAC /* Classes */,
 				661ED1FA1E0C218A005EE500 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -42,15 +43,6 @@
 				661ED1F91E0C218A005EE500 /* TLMonthYearPicker.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		661ED1FB1E0C218A005EE500 /* TLMonthYearPicker */ = {
-			isa = PBXGroup;
-			children = (
-				667FDE271E0D0ED200902CAC /* Classes */,
-				667FDE2A1E0D0ED200902CAC /* Info.plist */,
-			);
-			path = TLMonthYearPicker;
 			sourceTree = "<group>";
 		};
 		667FDE271E0D0ED200902CAC /* Classes */ = {
@@ -114,6 +106,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 661ED1EF1E0C218A005EE500;

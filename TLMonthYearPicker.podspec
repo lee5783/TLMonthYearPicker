@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "TLMonthYearPicker"
-  s.version      = "4.0.0"
+  s.version      = "4.1.0"
   s.summary      = "A simple month and year picker."
   s.description  = "A simple month and year picker."
   s.homepage     = "https://github.com/lee5783/TLMonthYearPicker"
@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   s.author             = "lee5783"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.platform     = :ios, "12.0"
+  s.platform     = :ios, "11.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source       = { :git => "https://github.com/lee5783/TLMonthYearPicker.git", :tag => "4.0.0" }
+  s.source       = { :git => "https://github.com/lee5783/TLMonthYearPicker.git", :tag => "4.1.0" }
   # s.source       = { :path => '.' }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
