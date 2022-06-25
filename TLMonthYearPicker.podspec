@@ -24,4 +24,5 @@ Pod::Spec.new do |s|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source_files  = "Classes", "Classes/**/*.{h,m,swift}"
   s.pod_target_xcconfig = { "SWIFT_VERSION" => "5.0" }
+  s.swift_versions = '5.0'
 end
