@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MonthYearPickerViewController.swift
 //  TLMonthYearPickerExample
 //
 //  Created by Thu Le on 12/22/16.
@@ -9,7 +9,7 @@
 import UIKit
 import TLMonthYearPicker
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TLMonthYearPickerDelegate {
+class MonthYearPickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TLMonthYearPickerDelegate {
     @IBOutlet weak var tableView: UITableView!
     var _locale: Locale!
     internal var currentPickerIndex: Int = NSNotFound
@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //data variable
     internal var selectedMonthYear: Date!
     internal var selectedYear: Date!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
