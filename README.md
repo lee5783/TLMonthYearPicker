@@ -2,7 +2,7 @@
 A simple month and year picker for iOS app development. Now support Swift 5</br>
 Android version can be found [here](https://github.com/minhnn2607/TLMonthYearPicker).
 
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/TLMonthYearPicker.svg?style=flat-square)](https://img.shields.io/cocoapods/v/Alamofire.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/TLMonthYearPicker.svg?style=flat-square)](https://img.shields.io/cocoapods/v/TLMonthYearPicker.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
 
