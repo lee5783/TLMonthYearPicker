@@ -56,7 +56,7 @@ For Swift 3.x, please use version 1.0.3:
 ### Installation with Swift Package Manager
 ```ruby
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "4.1.0"))
+        .package(url: "https://github.com/lee5783/TLMonthYearPicker.git", .upToNextMajor(from: "4.1.1"))
     ]
 ```
 
