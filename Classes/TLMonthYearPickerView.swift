@@ -242,7 +242,7 @@ public class TLMonthYearPickerView: UIControl, UIPickerViewDataSource, UIPickerV
     /// - Parameters:
     ///   - date: the date user choose
     ///   - animated: display UI animate or not
-    func setDate(date: Date, animated: Bool) {
+    public func setDate(date: Date, animated: Bool) {
         // Extract the month and year from the current date value
         let components = self.calendar.dateComponents([.year, .month], from: date)
         
