@@ -1,4 +1,5 @@
 # TLMonthYearPicker
+
 A simple month and year picker for iOS app development. Now support Swift 5</br>
 Android version can be found [here](https://github.com/minhnn2607/TLMonthYearPicker).
 
@@ -11,6 +12,10 @@ Android version can be found [here](https://github.com/minhnn2607/TLMonthYearPic
  <img src="https://github.com/lee5783/TLMonthYearPicker/raw/master/demo.gif" alt="TLMonthYearPicker"/>
 </p>
 
+## Requirements
+- iOS 12.0 and above
+- Xcode 14.0 and above (below Xcode version was not tested yet)
+
 ## How it works
 
 ```swift
@@ -20,49 +25,40 @@ Android version can be found [here](https://github.com/minhnn2607/TLMonthYearPic
     self.monthYearPicker.maximumDate = self.maximumDate
     self.monthYearPicker.delegate = self
 
-    //Picker delegate
+    // Picker delegate
     func monthYearPickerView(picker: TLMonthYearPickerView, didSelectDate date: Date) {
         //do your work with selected date object
     }
 ```
 
-## Add to your project
+## Integration
 
-There are 2 ways you can add TLMonthYearPickerView to your project:
+There are 4 ways you can add `TLMonthYearPickerView` to your project:
 
-
-### Installation with CocoaPods
+### CocoaPods
 ```ruby
     pod 'TLMonthYearPicker'
 ```
-For Swift 4.2, please use version 2.0.0:
-```ruby
-    pod 'TLMonthYearPicker', '3.0.0'
-```
-For Swift 4.0, please use version 2.0.0:
-```ruby
-    pod 'TLMonthYearPicker', '2.0.0'
-```
-For Swift 3.x, please use version 1.0.3:
-```ruby
-    pod 'TLMonthYearPicker', '1.0.3'
-```
 
-### Installation with Carthage
+### Carthage
 ```ruby
     github "lee5783/TLMonthYearPicker"
 ```
 
-### Installation with Swift Package Manager
+### Swift Package Manager (SPM)
 ```ruby
     dependencies: [
-        .package(url: "https://github.com/lee5783/TLMonthYearPicker.git", .upToNextMajor(from: "4.1.1"))
+        .package(url: "https://github.com/lee5783/TLMonthYearPicker.git", .upToNextMajor(from: "4.1.2"))
     ]
 ```
 
 ### Manual installation
 
-Simply drag 'TLMonthYearPickerView.swift' into your project.
+Simply drag `TLMonthYearPickerView.swift` into your project.
+
+### Contribution
+
+Any pull request is welcome. If you found any bug, please open a new issue.
 
 ## License
-Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
+Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See `LICENSE` for the full details.
