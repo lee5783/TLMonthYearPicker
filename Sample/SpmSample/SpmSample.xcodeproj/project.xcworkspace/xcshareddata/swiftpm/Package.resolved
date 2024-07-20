@@ -1,0 +1,15 @@
+{
+  "originHash" : "87e06bcc7d7d4aaa96b4b66a9c34117ed6260b1f2c7fce4f8c64bebf9d24474e",
+  "pins" : [
+    {
+      "identity" : "tlmonthyearpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lee5783/TLMonthYearPicker",
+      "state" : {
+        "revision" : "67fa43e1031d8f56c0c3be20edf51b927591d673",
+        "version" : "4.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -13,7 +13,7 @@
 		66D95A112868187700CC95E6 /* MonthYearPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D95A0E2868187700CC95E6 /* MonthYearPicker.storyboard */; };
 		66D95A122868187700CC95E6 /* LocalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D95A0F2868187700CC95E6 /* LocalesViewController.swift */; };
 		66D95A132868187700CC95E6 /* MonthYearPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D95A102868187700CC95E6 /* MonthYearPickerViewController.swift */; };
-		8AC43F27085E15F84B136A00 /* Pods_TLMonthYearPickerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505D1FEA8AE69A3EE30644F6 /* Pods_TLMonthYearPickerExample.framework */; };
+		AFF32D8A53A1EE250AACF60D /* Pods_CocoapodsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A7B5C5415452196643E217 /* Pods_CocoapodsSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,10 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A261D69D90B56125A8A7E8D /* Pods-TLMonthYearPickerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLMonthYearPickerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLMonthYearPickerExample/Pods-TLMonthYearPickerExample.debug.xcconfig"; sourceTree = "<group>"; };
-		46D317F5C5D552CA5D2A1DAF /* Pods-TLMonthYearPickerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLMonthYearPickerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLMonthYearPickerExample/Pods-TLMonthYearPickerExample.release.xcconfig"; sourceTree = "<group>"; };
-		505D1FEA8AE69A3EE30644F6 /* Pods_TLMonthYearPickerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLMonthYearPickerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66C9A2811E0C238A000E4AD3 /* TLMonthYearPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLMonthYearPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F4D727503D82EBC7F138E4 /* Pods-CocoapodsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocoapodsSample/Pods-CocoapodsSample.release.xcconfig"; sourceTree = "<group>"; };
+		66C9A2811E0C238A000E4AD3 /* CocoapodsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C9A2841E0C238A000E4AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C9A28B1E0C238A000E4AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C9A28E1E0C238A000E4AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +39,8 @@
 		66D95A0E2868187700CC95E6 /* MonthYearPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MonthYearPicker.storyboard; sourceTree = "<group>"; };
 		66D95A0F2868187700CC95E6 /* LocalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalesViewController.swift; sourceTree = "<group>"; };
 		66D95A102868187700CC95E6 /* MonthYearPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthYearPickerViewController.swift; sourceTree = "<group>"; };
+		A7C265E69A99B55731E4242A /* Pods-CocoapodsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoapodsSample/Pods-CocoapodsSample.debug.xcconfig"; sourceTree = "<group>"; };
+		F4A7B5C5415452196643E217 /* Pods_CocoapodsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoapodsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC43F27085E15F84B136A00 /* Pods_TLMonthYearPickerExample.framework in Frameworks */,
+				AFF32D8A53A1EE250AACF60D /* Pods_CocoapodsSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +58,7 @@
 		30B1395AB73D158AED3CE457 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				505D1FEA8AE69A3EE30644F6 /* Pods_TLMonthYearPickerExample.framework */,
+				F4A7B5C5415452196643E217 /* Pods_CocoapodsSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -66,8 +66,8 @@
 		5BDD6B468A14049A45175AB1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1A261D69D90B56125A8A7E8D /* Pods-TLMonthYearPickerExample.debug.xcconfig */,
-				46D317F5C5D552CA5D2A1DAF /* Pods-TLMonthYearPickerExample.release.xcconfig */,
+				A7C265E69A99B55731E4242A /* Pods-CocoapodsSample.debug.xcconfig */,
+				03F4D727503D82EBC7F138E4 /* Pods-CocoapodsSample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -75,7 +75,7 @@
 		66C9A2781E0C238A000E4AD3 = {
 			isa = PBXGroup;
 			children = (
-				66C9A2831E0C238A000E4AD3 /* TLMonthYearPickerExample */,
+				66C9A2831E0C238A000E4AD3 /* CocoapodsSample */,
 				66C9A2821E0C238A000E4AD3 /* Products */,
 				5BDD6B468A14049A45175AB1 /* Pods */,
 				30B1395AB73D158AED3CE457 /* Frameworks */,
@@ -85,12 +85,12 @@
 		66C9A2821E0C238A000E4AD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66C9A2811E0C238A000E4AD3 /* TLMonthYearPickerExample.app */,
+				66C9A2811E0C238A000E4AD3 /* CocoapodsSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66C9A2831E0C238A000E4AD3 /* TLMonthYearPickerExample */ = {
+		66C9A2831E0C238A000E4AD3 /* CocoapodsSample */ = {
 			isa = PBXGroup;
 			children = (
 				66D95A0D2868187700CC95E6 /* Classes */,
@@ -99,7 +99,7 @@
 				66C9A2901E0C238A000E4AD3 /* Info.plist */,
 				66C9A28D1E0C238A000E4AD3 /* LaunchScreen.storyboard */,
 			);
-			path = TLMonthYearPickerExample;
+			path = CocoapodsSample;
 			sourceTree = "<group>";
 		};
 		66D95A0D2868187700CC95E6 /* Classes */ = {
@@ -115,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66C9A2801E0C238A000E4AD3 /* TLMonthYearPickerExample */ = {
+		66C9A2801E0C238A000E4AD3 /* CocoapodsSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66C9A2931E0C238A000E4AD3 /* Build configuration list for PBXNativeTarget "TLMonthYearPickerExample" */;
+			buildConfigurationList = 66C9A2931E0C238A000E4AD3 /* Build configuration list for PBXNativeTarget "CocoapodsSample" */;
 			buildPhases = (
 				098E83E7C615CD2A7FECE41B /* [CP] Check Pods Manifest.lock */,
 				66C9A27D1E0C238A000E4AD3 /* Sources */,
@@ -130,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = TLMonthYearPickerExample;
+			name = CocoapodsSample;
 			productName = TLMonthYearPickerExample;
-			productReference = 66C9A2811E0C238A000E4AD3 /* TLMonthYearPickerExample.app */;
+			productReference = 66C9A2811E0C238A000E4AD3 /* CocoapodsSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,11 +148,11 @@
 					66C9A2801E0C238A000E4AD3 = {
 						CreatedOnToolsVersion = 8.2;
 						LastSwiftMigration = 1200;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
-			buildConfigurationList = 66C9A27C1E0C238A000E4AD3 /* Build configuration list for PBXProject "TLMonthYearPickerExample" */;
+			buildConfigurationList = 66C9A27C1E0C238A000E4AD3 /* Build configuration list for PBXProject "CocoapodsSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -166,7 +166,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66C9A2801E0C238A000E4AD3 /* TLMonthYearPickerExample */,
+				66C9A2801E0C238A000E4AD3 /* CocoapodsSample */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +196,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TLMonthYearPickerExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CocoapodsSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -209,7 +209,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TLMonthYearPickerExample/Pods-TLMonthYearPickerExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CocoapodsSample/Pods-CocoapodsSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/TLMonthYearPicker/TLMonthYearPicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -218,7 +218,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TLMonthYearPickerExample/Pods-TLMonthYearPickerExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CocoapodsSample/Pods-CocoapodsSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -365,28 +365,34 @@
 		};
 		66C9A2941E0C238A000E4AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A261D69D90B56125A8A7E8D /* Pods-TLMonthYearPickerExample.debug.xcconfig */;
+			baseConfigurationReference = A7C265E69A99B55731E4242A /* Pods-CocoapodsSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TLMonthYearPickerExample/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CocoapodsSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lee5783.TLMonthYearPickerExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lee5783.TLMonthYearPicker.CocoapodsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		66C9A2951E0C238A000E4AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46D317F5C5D552CA5D2A1DAF /* Pods-TLMonthYearPickerExample.release.xcconfig */;
+			baseConfigurationReference = 03F4D727503D82EBC7F138E4 /* Pods-CocoapodsSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TLMonthYearPickerExample/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CocoapodsSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lee5783.TLMonthYearPickerExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lee5783.TLMonthYearPicker.CocoapodsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -394,7 +400,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		66C9A27C1E0C238A000E4AD3 /* Build configuration list for PBXProject "TLMonthYearPickerExample" */ = {
+		66C9A27C1E0C238A000E4AD3 /* Build configuration list for PBXProject "CocoapodsSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66C9A2911E0C238A000E4AD3 /* Debug */,
@@ -403,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66C9A2931E0C238A000E4AD3 /* Build configuration list for PBXNativeTarget "TLMonthYearPickerExample" */ = {
+		66C9A2931E0C238A000E4AD3 /* Build configuration list for PBXNativeTarget "CocoapodsSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66C9A2941E0C238A000E4AD3 /* Debug */,

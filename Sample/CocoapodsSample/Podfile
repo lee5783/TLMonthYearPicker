@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+
+target 'CocoapodsSample' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # use below line for development mode
+  pod 'TLMonthYearPicker', :path => '../../'
+
+  # use below line for production mode
+  # pod 'TLMonthYearPicker', :git => 'https://github.com/lee5783/TLMonthYearPicker.git'
+end
