@@ -1,0 +1,4 @@
+# to check with local carthage you have to specify
+# git "{your local path here}" "{your local branch}"
+
+github "lee5783/TLMonthYearPicker"

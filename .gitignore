@@ -4,3 +4,10 @@ TLMonthYearPicker.xcodeproj/project.xcworkspace/xcuserdata
 TLMonthYearPickerExample/TLMonthYearPickerExample.xcodeproj/xcuserdata
 .build
 .swiftpm
+Sample/CarthageSample/Carthage
+Sample/CarthageSample/CarthageSample.xcodeproj/xcuserdata
+Sample/CocoapodsSample/CocoapodsSample.xcodeproj/xcuserdata
+Sample/CocoapodsSample/CocoapodsSample.xcodeproj/project.xcworkspace/xcuserdata
+Sample/SpmSample/SpmSample.xcodeproj/xcuserdata
+Sample/SpmSample/SpmSample.xcodeproj/project.xcworkspace/xcuserdata
+UserInterfaceState.xcuserstate
